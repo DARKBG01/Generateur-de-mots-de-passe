@@ -25,7 +25,7 @@ class App(QtWidgets.QMainWindow,Ui_MainWindow):
 
     def Get_Size(self):
         try:
-            qr_size = Image.open("../Assets/.Cache/image.png").size
+            qr_size = Image.open("Assets/.Cache/image.png").size
             self.label_2.setText(f"{qr_size[0]} X {qr_size[1]}")
         except:
             self.label_2.setText(f"0 X 0")
@@ -41,14 +41,14 @@ class App(QtWidgets.QMainWindow,Ui_MainWindow):
     def Generate_Qrcode(self):
         self.qrcode_image.setPalette(QtGui.QColor("red"))
         info = f"{self.information.toPlainText()}"
-        if os.path.isfile("../Assets/.Cache/image.png"):
-            os.remove("../Assets/.Cache/image.png")
-            qrcode.make(data=info).save("../Assets/.Cache/image.png")
+        if os.path.isfile("Assets/.Cache/image.png"):
+            os.remove("Assets/.Cache/image.png")
+            qrcode.make(data=info).save("Assets/.Cache/image.png")
         else:
-            qrcode.make(data=info).save("../Assets/.Cache/image.png")
+            qrcode.make(data=info).save("Assets/.Cache/image.png")
             print(info)
         self.qrcode_image.clear()
-        self.qrcode_image.setPixmap(QtGui.QPixmap("../Assets/.Cache/image.png").scaled(460,460))
+        self.qrcode_image.setPixmap(QtGui.QPixmap("Assets/.Cache/image.png").scaled(460,460))
         self.Get_Size()
 
     def Path(self):
@@ -73,7 +73,7 @@ class App(QtWidgets.QMainWindow,Ui_MainWindow):
         print(self.file)
 
     def Quitter(self):
-        self.destroy()
+        self.close()
 
     def Help(self):
         msg = QtWidgets.QMessageBox()
