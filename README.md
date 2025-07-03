@@ -1,7 +1,3 @@
-Voici un exemple de README adapté pour un générateur de QR code (Generateur de qrcode) :
-
----
-
 # Générateur de QR Code
 
 Un générateur simple et rapide de QR codes pour vos liens, textes ou toute autre information.
@@ -12,17 +8,16 @@ Un générateur simple et rapide de QR codes pour vos liens, textes ou toute aut
 - Personnalisation de la taille du QR code
 - Export en format image (PNG/JPG)
 - Interface conviviale (CLI ou graphique selon le projet)
-- Aucun enregistrement nécessaire, 100% local
+- 100% local, aucun enregistrement nécessaire
 
 ## Installation
 
 Clone le dépôt :
 
 ```bash
-git clone https://github.com/DARKBG01/Generateur-de-mots-de-passe.git
-cd Generateur-de-mots-de-passe
+git clone https://github.com/DARKBG01/Generateur-de-QrCode.git
+cd Generateur-de-QrCode
 ```
-> Remplace le nom du dépôt si tu utilises un autre repo pour le QR code !
 
 Installe les dépendances nécessaires (exemple pour Python) :
 
@@ -44,7 +39,7 @@ python generateur_qrcode.py "https://github.com/"
 
 Le QR code sera enregistré sous forme d’image dans le dossier courant.
 
-## Auteurs
+## Auteur
 
 - [DARKBG01](https://github.com/DARKBG01)
 
